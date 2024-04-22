@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "926102124416",
+    "project_id": "quest-arcade-app",
+    "storage_bucket": "quest-arcade-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:926102124416:android:7723c19b2f9a46f345f365",
+        "android_client_info": {
+          "package_name": "com.example.quest_arcade_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBkWheoEoYJXIvhuCY6xm8v2hTTnBGX834"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

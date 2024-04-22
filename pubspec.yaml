@@ -1,0 +1,69 @@
+name: quest_arcade_app
+description: "A new Flutter project."
+
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.2.6 <4.0.0'
+
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  auto_route: ^7.8.4
+  flutter_svg: ^2.0.9
+  flutter_bloc: ^8.1.3
+  get_it: ^7.6.4
+  flutter_launcher_icons: ^0.13.1
+  shared_preferences: ^2.2.2
+  flutter_animate: ^4.5.0
+  flutter_countdown_timer: ^4.1.0
+  firebase_messaging: ^14.2.2
+  firebase_core: ^2.21.0
+  firebase_remote_config: ^4.3.3
+
+
+  cupertino_icons: ^1.0.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  auto_route_generator: ^7.1.1
+  build_runner: ^2.4.4
+
+  flutter_lints: ^2.0.0
+
+
+flutter:
+
+  uses-material-design: true
+
+  assets:
+     - assets/images/
+     - assets/images/splash/
+     - assets/images/home/
+     - assets/images/elements/
+     - assets/images/checkers/
+     - assets/images/find-numbers/
+     - assets/images/find-numbers/levels/
+     - assets/images/merge-cards/
+
+  fonts:
+    - family: Jost
+      fonts:
+        - asset: fonts/Jost-Regular.ttf
+        - asset: fonts/Jost-Light.ttf
+        - asset: fonts/Jost-Medium.ttf
+        - asset: fonts/Jost-Bold.ttf
+        - asset: fonts/Jost-Semibold.ttf
+        - asset: fonts/Jost-Black.ttf
+
+flutter_icons:
+  android: "launcher_icon"
+  ios: true
+  remove_alpha_ios: true
+  image_path: "assets/images/app_icon.png"
