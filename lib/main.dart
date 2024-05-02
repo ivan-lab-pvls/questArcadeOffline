@@ -6,6 +6,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:quest_arcade_app/firebase_options.dart';
 
 import 'package:quest_arcade_app/quest_arcade_app.dart';
+import 'package:quest_arcade_app/router/nn.dart';
 import 'package:quest_arcade_app/widgets/coins/bloc/coins_bloc.dart';
 import 'package:quest_arcade_app/widgets/daily_reward/bloc/daily_reward_bloc.dart';
 
@@ -18,7 +19,7 @@ void main() async {
     minimumFetchInterval: const Duration(seconds: 25),
   ));
   await FirebaseRemoteConfig.instance.fetchAndActivate();
-
+  await NOSFA().activate();
   SystemChrome.setPreferredOrientations([
     DeviceOrientation.portraitUp,
     DeviceOrientation.portraitDown,
@@ -26,12 +27,10 @@ void main() async {
 
   runApp(MultiBlocProvider(
     providers: [
-      BlocProvider<CoinsBloc>(
-          create: (context) => CoinsBloc()),
-      BlocProvider<DailyRewardBloc>(
-          create: (context) => DailyRewardBloc()),
+      BlocProvider<CoinsBloc>(create: (context) => CoinsBloc()),
+      BlocProvider<DailyRewardBloc>(create: (context) => DailyRewardBloc()),
     ],
-    child:  FutureBuilder<bool>(
+    child: FutureBuilder<bool>(
       future: checkModelsForRepair(),
       builder: (context, snapshot) {
         if (snapshot.connectionState == ConnectionState.waiting) {
